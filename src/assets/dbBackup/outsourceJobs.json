@@ -1,0 +1,48 @@
+[
+	{
+		"_id" : "ObjectId(5da43c2b3a35dc3708e834b9)",
+		"_metadata" : {
+			"parent" : {
+				"name" : "SendToOutsourceFlowMetadata",
+				"selection" : {
+					"_id" : "ObjectId(5a4a942afa7277103982bcf8)"
+				},
+				"collection" : "flows"
+			},
+			"creator" : "yonatanyatuv@gmail.com",
+			"collection" : "outsourceJobs",
+			"submittionTime" : 1571044395631
+		},
+		"name" : "Integrate Wonderflow with Jira so Bob could create a Jira story from a job",
+		"components" : {
+			"SetUp" : {
+				"MinimalSourceCode" : [
+					{
+						"file" : "utils\\jiraBridge.js",
+						"extension" : "js",
+						"description" : "Bridge (Connector) between Wonderflow server and Jira API"
+					},
+					{
+						"file" : "routes\\jobs.js",
+						"extension" : "js",
+						"description" : "Wonderflow Server api responsible for handling client requests related to Jira logic"
+					},
+					{
+						"file" : "public\\jobs\\jobControllers.js",
+						"extension" : "js",
+						"description" : "Client side controller that handles user Jira related commands"
+					},
+					{
+						"file" : "public\\jobs\\outsourcejob.html",
+						"extension" : "html",
+						"description" : "Html template for displaying Job info to the user"
+					}
+				]
+			},
+			"Instructions" : {
+				"url" : "https://flowbiz.atlassian.net/browse/WN-9",
+				"details" : "Jira story with all relevant information about this task"
+			}
+		}
+	}
+]

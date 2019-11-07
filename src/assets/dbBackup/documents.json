@@ -1,0 +1,51 @@
+[
+	{
+		"_id" : "ObjectId(5d70c22343c39dcd01b53f51)",
+		"_metadata" : {
+			"parent" : {
+				"name" : "CreateDocument_0",
+				"collection" : "flows",
+				"selection" : {
+					"_id" : "ObjectId(5d70c22343c39dcd01b53f4e)"
+				}
+			},
+			"owner" : {
+				"name" : "Testing SendToOutsourceFlowMetadata Flow",
+				"collection" : "progressFlows",
+				"selection" : {
+					"_id" : "ObjectId(000000000000100000000071)"
+				},
+				"ElementPath" : "components.ProductDescription"
+			},
+			"creator" : "floydwonderful@gmail.com",
+			"type" : "Document",
+			"innerMetadata" : {
+				"name" : "ProductDescription",
+				"type" : {
+					"name" : "Document",
+					"flow" : "CreateDocument_0"
+				},
+				"description" : "Requirements of the assignment"
+			}
+		},
+		"name" : "SendToOutsourceFlowMetadata Product Description @@@@",
+		"description" : "TODO fill Description",
+		"components" : [
+			{
+				"name" : "Comp 0",
+				"text" : "Test Counter 36"
+			},
+			{
+				"name" : "Comp1",
+				"text" : "This component was added on a progress document of an existing done document"
+			},
+			{
+				"name" : "Comp2",
+				"text" : "Yet another component that was added on a progress document of the existing document"
+			}
+		],
+		"_pageConfiguration" : {
+			"HTML-SHOW#complete-view-div" : true
+		}
+	}
+]

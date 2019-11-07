@@ -1,0 +1,55 @@
+[
+	{
+		"_id" : "ObjectId(000000000000100000000071)",
+		"_metadata" : {
+			"creator" : "floydwonderful@gmail.com",
+			"parent" : {
+				"name" : "SendToOutsourceFlowMetadata",
+				"selection" : {
+					"_id" : "ObjectId(5d70c22343c39dcd01b53f4f)"
+				},
+				"collection" : "flows"
+			},
+			"collection" : "progressFlows",
+			"submittionTime" : 1567700417583
+		},
+		"name" : "Testing SendToOutsourceFlowMetadata Flow",
+		"components" : {
+			"SetUp" : {
+				"MinimalSourceCode" : [
+					{
+						"file" : "ImportantFile.js",
+						"extension" : "js",
+						"description" : "very important file"
+					},
+					{
+						"file" : "anotherImportantFile.js",
+						"extension" : "js",
+						"description" : "yet another important file"
+					}
+				]
+			},
+			"Output" : {
+				"_metadata" : {
+					"name" : "Output Document of TSOFM",
+					"collection" : "pDocuments",
+					"selection" : {
+						"_id" : "ObjectId(000000000000100000000074)"
+					}
+				}
+			},
+			"ProductDescription" : {
+				"_metadata" : {
+					"name" : "SendToOutsourceFlowMetadata Product Description @@@@",
+					"collection" : "pDocuments",
+					"selection" : {
+						"_id" : "ObjectId(000000000000100000000073)"
+					}
+				}
+			}
+		},
+		"_pageConfiguration" : {
+			"HTML-SHOW#complete-view-div" : true
+		}
+	}
+]

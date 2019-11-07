@@ -1,0 +1,145 @@
+[
+	{
+		"_id" : ObjectId("5d70c22343c39dcd01b53f4e"),
+		"name" : "CreateDocument_0",
+		"header1" : "Document",
+		"attributes" : [
+			{
+				"key" : "name",
+				"type" : "String"
+			},
+			{
+				"key" : "description",
+				"type" : "Text"
+			}
+		],
+		"subitems" : {
+			"component" : {
+				"attributes" : [
+					{
+						"key" : "name",
+						"type" : "String"
+					},
+					{
+						"key" : "text",
+						"type" : "Text"
+					}
+				]
+			}
+		},
+		"items" : [
+			{
+				"name" : "components",
+				"type" : "JsonList",
+				"listItemRef" : "component"
+			}
+		],
+		"processor" : "CreateFlowProcessor"
+	},
+	{
+		"_id" : ObjectId("5d70c22343c39dcd01b53f4f"),
+		"name" : "SendToOutsourceFlowMetadata",
+		"project" : {
+			"components" : [
+				{
+					"name" : "SetUp",
+					"description" : "Initial environment required for start working :)",
+					"subunits" : [
+						{
+							"name" : "MinimalSourceCode",
+							"type" : "JsonList",
+							"listItemRef" : "sourceUnit",
+							"description" : "Metadata for filling the details about a job that is sent to outsource"
+						},
+						{
+							"name" : "VersionControl",
+							"description" : "The details about version control repository that holds the code for initial work of outsource contractor"
+						},
+						{
+							"name" : "DataBase",
+							"description" : "Dedicated DataBase to be used for the outsource contractor work"
+						}
+					]
+				},
+				{
+					"name" : "ProductDescription",
+					"type" : {
+						"name" : "Document",
+						"flow" : "CreateDocument_0"
+					},
+					"description" : "Requirements of the assignment"
+				},
+				{
+					"name" : "Instructions",
+					"description" : "Instructions for the contractor how to set up the development environment including:\nversion control, data base, installation details ect.",
+					"attributes" : [
+						{
+							"key" : "url",
+							"type" : "String"
+						},
+						{
+							"key" : "details",
+							"type" : "Text"
+						}
+					]
+				},
+				{
+					"name" : "Output",
+					"type" : "Document",
+					"description" : "The outcome of the work done",
+					"subunits" : [
+						{
+							"name" : "Modules"
+						},
+						{
+							"name" : "Technology"
+						},
+						{
+							"name" : "API_Integration"
+						}
+					]
+				},
+				{
+					"name" : "RoadMap",
+					"type" : "Document",
+					"description" : "List of tasks, each one is a flow",
+					"subunits" : [
+						{
+							"name" : "VersionControl"
+						}
+					]
+				}
+			]
+		},
+		"attributes" : [
+			{
+				"key" : "name",
+				"type" : "String"
+			}
+		],
+		"subitems" : {
+			"sourceUnit" : {
+				"attributes" : [
+					{
+						"key" : "file",
+						"type" : "String"
+					},
+					{
+						"key" : "extension",
+						"type" : {
+							"code" : "function String() {\n    [native code]\n}"
+						}
+					},
+					{
+						"key" : "description",
+						"type" : "String"
+					}
+				]
+			}
+		},
+		"_metadata" : {
+			"creator" : "floydwonderful@gmail.com"
+		},
+		"processor" : "CreateProjectProcessor"
+	}
+]

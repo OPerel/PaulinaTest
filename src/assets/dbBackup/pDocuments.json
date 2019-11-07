@@ -1,0 +1,101 @@
+[
+	{
+		"_id" : "ObjectId(000000000000100000000073)",
+		"_metadata" : {
+			"parent" : {
+				"name" : "CreateDocument_0",
+				"collection" : "flows",
+				"selection" : {
+					"_id" : "ObjectId(5d70c22343c39dcd01b53f4e)"
+				}
+			},
+			"owner" : {
+				"collection" : "progressFlows",
+				"selection" : {
+					"_id" : "ObjectId(000000000000100000000071)"
+				},
+				"ElementPath" : "components.ProductDescription"
+			},
+			"creator" : "floydwonderful@gmail.com",
+			"type" : "Document",
+			"innerMetadata" : {
+				"name" : "ProductDescription",
+				"type" : {
+					"name" : "Document",
+					"flow" : "CreateDocument_0"
+				},
+				"description" : "Requirements of the assignment"
+			},
+			"collection" : "pDocuments",
+			"original" : {
+				"name" : "SendToOutsourceFlowMetadata Product Description @@@@",
+				"selection" : {
+					"_id" : "ObjectId(5d70c22343c39dcd01b53f51)"
+				},
+				"collection" : "documents"
+			}
+		},
+		"name" : "SendToOutsourceFlowMetadata Product Description @@@@",
+		"description" : "TODO fill Description",
+		"components" : [
+			{
+				"name" : "Comp 0",
+				"text" : "Test Counter 36"
+			},
+			{
+				"name" : "Comp1",
+				"text" : "This component was added on a progress document of an existing done document"
+			},
+			{
+				"name" : "Comp2",
+				"text" : "Yet another component that was added on a progress document of the existing document"
+			}
+		]
+	},
+	{
+		"_id" : "ObjectId(000000000000100000000074)",
+		"_metadata" : {
+			"parent" : {
+				"name" : "CreateDocument_0",
+				"collection" : "flows",
+				"selection" : {
+					"_id" : "ObjectId(5d70c22343c39dcd01b53f4e)"
+				}
+			},
+			"owner" : {
+				"collection" : "progressFlows",
+				"selection" : {
+					"_id" : "ObjectId(000000000000100000000071)"
+				},
+				"ElementPath" : "components.Output"
+			},
+			"creator" : "floydwonderful@gmail.com",
+			"type" : "Document",
+			"collection" : "pDocuments",
+			"innerMetadata" : {
+				"name" : "Output",
+				"type" : "Document",
+				"description" : "The outcome of the work done",
+				"subunits" : [
+					{
+						"name" : "Modules"
+					},
+					{
+						"name" : "Technology"
+					},
+					{
+						"name" : "API_Integration"
+					}
+				]
+			}
+		},
+		"name" : "Output Document of TSOFM",
+		"description" : "TODO Fill Output description",
+		"components" : [
+			{
+				"name" : "First Component",
+				"text" : "Lets try to finish with components"
+			}
+		]
+	}
+]
