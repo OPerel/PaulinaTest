@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angularTest": {
+    "PaulinaTest": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angularTest",
+            "outputPath": "dist/PaulinaTest",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -63,18 +63,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angularTest:build"
+            "browserTarget": "PaulinaTest:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angularTest:build:production"
+              "browserTarget": "PaulinaTest:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angularTest:build"
+            "browserTarget": "PaulinaTest:build"
           }
         },
         "test": {
@@ -111,15 +111,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "angularTest:serve"
+            "devServerTarget": "PaulinaTest:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "angularTest:serve:production"
+              "devServerTarget": "PaulinaTest:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "angularTest"
+  "defaultProject": "PaulinaTest"
 }

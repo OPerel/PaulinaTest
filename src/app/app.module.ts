@@ -3,10 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FlowManagementComponent } from './flow-management/flow-management.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FlowManagementComponent
   ],
   imports: [
     BrowserModule,
