@@ -1,22 +1,17 @@
-import { Component, OnInit } from '@angular/core';
-import { FlowManagementService  } from '../flow-management.service';
+import { Component, Input } from '@angular/core';
+import { AuthService  } from '../auth.service';
 
 @Component({
   selector: 'app-navigation',
   templateUrl: './navigation.component.html',
   styleUrls: ['./navigation.component.css']
 })
-export class NavigationComponent implements OnInit {
-  userEmail;
+export class NavigationComponent {
+  @Input() userEmail: string;
 
-  constructor(private fls: FlowManagementService) { }
+  constructor(private auth: AuthService) {}
 
-  showUserEmail() {
-    this.fls.getUserFlows().subscribe(res => this.userEmail = res[0]._metadata.creator);
+  async logout() {
+    this.auth.logout();
   }
-
-  ngOnInit() {
-    this.showUserEmail();
-  }
-
 }

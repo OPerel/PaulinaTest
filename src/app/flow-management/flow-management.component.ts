@@ -7,19 +7,21 @@ import { FlowManagementService  } from '../flow-management.service';
   styleUrls: ['./flow-management.component.css']
 })
 export class FlowManagementComponent implements OnInit {
-  users;
+  userFlows;
+  userEmail;
 
   constructor(private fls: FlowManagementService) { }
 
-  showUsers() {
+  showFlows() {
     this.fls.getUserFlows().subscribe(res => {
-      console.log(res);
-      this.users = res;
+      console.log('Got all users flows: ', res);
+      this.userFlows = res;
+      this.userEmail = this.userFlows.UserData.UserEmail;
     });
   }
 
-  ngOnInit() {
-    this.showUsers();
+  async ngOnInit() {
+    this.showFlows();
   }
 
 }

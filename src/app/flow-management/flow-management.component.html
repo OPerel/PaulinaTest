@@ -1,8 +1,6 @@
+<app-navigation [userEmail]="userEmail"></app-navigation>
+
 <p>flow-management works!</p>
-<!-- <button (click)="showUsers()">userflows</button> -->
-<div>{{ userFlows }}</div>
-<ul>
-  <li *ngFor="let user of users">
-    {{ user.name }}
-  </li>
-</ul>
+
+<div>{{ userFlows.Result }} fetching user data and flows</div>
+
