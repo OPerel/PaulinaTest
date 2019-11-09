@@ -1,6 +1,22 @@
 <app-navigation [userEmail]="userEmail"></app-navigation>
 
-<p>flow-management works!</p>
+<app-flow-management-table
+  [name]="'Published Documents'"
+  [documentData]="documents"
+></app-flow-management-table>
 
-<div>{{ userFlows.Result }} fetching user data and flows</div>
+<app-flow-management-table
+  [name]="'Progress Documents'"
+  [documentData]="pDocuments"
+></app-flow-management-table>
+
+<app-flow-management-table
+  [name]="'In Progress Flows'"
+  [documentData]="progressFlows"
+></app-flow-management-table>
+
+<app-flow-management-table
+  [name]="'Outsource Jobs'"
+  [documentData]="outSourceJobs"
+></app-flow-management-table>
 

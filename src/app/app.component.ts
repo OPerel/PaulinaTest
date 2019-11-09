@@ -17,6 +17,8 @@ export class AppComponent implements OnInit {
   async ngOnInit() {
     // Get the authentication state for immediate use
     this.isAuthenticated = await this.auth.getIsAuthenticated();
-    this.auth.sessionId();
+    if (this.isAuthenticated) {
+      this.auth.sessionId();
+    }
   }
 }

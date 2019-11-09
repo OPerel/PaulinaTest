@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { OktaAuthModule } from '@okta/okta-angular';
 
 import { HttpClientModule } from '@angular/common/http';
-import { FlowManagementService  } from './flow-management.service';
+import { FlowManagementService } from './flow-management.service';
+import { AuthService } from './auth.service';
 
 import { AppComponent } from './app.component';
 import { FlowManagementComponent } from './flow-management/flow-management.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { OktaLoginComponent } from './okta-login/okta-login.component';
+import { FlowManagementTableComponent } from './flow-management-table/flow-management-table.component';
 
 const config = {
   issuer: 'https://dev-662113.okta.com/oauth2/default',
@@ -25,7 +27,8 @@ const config = {
     AppComponent,
     FlowManagementComponent,
     NavigationComponent,
-    OktaLoginComponent
+    OktaLoginComponent,
+    FlowManagementTableComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +36,7 @@ const config = {
     HttpClientModule,
     OktaAuthModule.initAuth(config)
   ],
-  providers: [FlowManagementService],
+  providers: [FlowManagementService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
