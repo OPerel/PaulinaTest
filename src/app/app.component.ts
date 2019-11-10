@@ -19,6 +19,9 @@ export class AppComponent implements OnInit {
     this.isAuthenticated = await this.auth.getIsAuthenticated();
     if (this.isAuthenticated) {
       this.auth.sessionId();
+      if (window.location.href === 'http://localhost:4200/') {
+        window.location.href = '/flow-management';
+      }
     }
   }
 }

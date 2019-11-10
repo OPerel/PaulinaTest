@@ -14,8 +14,6 @@ export class FlowManagementComponent implements OnInit {
   progressFlows: [];
   outSourceJobs: [];
 
-  // pDocuments = this.userFlows.pDocuments;
-
   constructor(private fls: FlowManagementService) { }
 
   showFlows() {
