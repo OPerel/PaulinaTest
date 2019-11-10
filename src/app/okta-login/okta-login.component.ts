@@ -8,7 +8,7 @@ import * as OktaSignIn from '@okta/okta-signin-widget';
   templateUrl: './okta-login.component.html',
   styleUrls: ['./okta-login.component.css']
 })
-export class OktaLoginComponent {
+export class OktaLoginComponent implements OnInit {
   signIn;
   widget = new OktaSignIn({
     baseUrl: 'https://dev-662113.okta.com',
