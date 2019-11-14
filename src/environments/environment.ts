@@ -2,8 +2,12 @@
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
-export const environment = {
-  production: false
+export const env = {
+  production: false,
+  PORT: 4200,
+  API_URL: 'http://localhost:8000/api/',
+  OKTA_URL: 'https://dev-662113.okta.com/',
+  OKTA_CLIENT_ID: '0oa1en37vvXcI1uwd357'
 };
 
 /*

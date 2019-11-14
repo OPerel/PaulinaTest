@@ -3,15 +3,18 @@ import { Router, NavigationStart} from '@angular/router';
 import { OktaAuthService } from '@okta/okta-angular';
 import * as OktaSignIn from '@okta/okta-signin-widget';
 
+import { env } from '../../environments/environment';
+
 @Component({
   selector: 'app-okta-login',
   templateUrl: './okta-login.component.html',
   styleUrls: ['./okta-login.component.css']
 })
 export class OktaLoginComponent implements OnInit {
-  signIn;
+  signIn: OktaAuthService;
+
   widget = new OktaSignIn({
-    baseUrl: 'https://dev-662113.okta.com',
+    baseUrl: env.OKTA_URL,
     authParams: {
       pkce: true
     }
