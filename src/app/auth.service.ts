@@ -12,12 +12,7 @@ import { env } from '../environments/environment';
   providedIn: 'root'
 })
 export class AuthService {
-  /*
-  Couldn't get registration to work.
-  this.registration gets nullified by the time prepareHttpRequest() is called.
-  */
   isAuthenticated: boolean;
-  registration: boolean;
   logoUrl = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqv09Aq5MR5E_DnZ8e_RNkE4zTd1JWV0UQGQy5wFSm4BKxYVkg';
 
   widget = new OktaSignIn({
@@ -56,7 +51,7 @@ export class AuthService {
       if (res.status === 'SUCCESS') {
         this.oktaAuth.loginRedirect('/flow-management', { sessionToken: res.session.token });
         if (activationToken) {
-          this.registration = true;
+          localStorage.Registration = true;
         }
         // Hide the widget
         this.widget.hide();
@@ -92,10 +87,11 @@ export class AuthService {
   }
 
   prepareHttprequest() {
-    console.log('prepareHttprequest this.registration: ', this.registration);
+    console.log('prepareHttprequest localStorage.Registration: ', localStorage.Registration);
     let accessToken = `Bearer ${JSON.parse(localStorage['okta-token-storage']).accessToken.accessToken}`;
-    if (this.registration) {
+    if (localStorage.Registration === 'true') {
       accessToken = 'Registration ' + accessToken;
+      localStorage.Registration = false;
     }
     const sessionId = localStorage.sessionId;
     const headers = new HttpHeaders().append('authorization', accessToken);
